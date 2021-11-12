@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Gender</title>
+    <style>
+
+        .btn1
+        {
+            width: 380px;
+            height: 100px;
+            background-color:rgba(0, 0, 0,0);
+            position: absolute;
+            top: 920px;
+            left: 765px;
+            border: 1px;
+        }
+
+        .name
+        {
+            background-color:rgb(255, 255, 255);
+            outline-color: rgba(0, 0, 0, 0);
+            color: rgb(117, 117, 117);
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 42px;
+            font-weight: 500;
+            text-align: center;
+            position: absolute;
+            width: 180px;
+            height: 70px;
+            top: 660px;
+            left: 1080px;
+            border: 1px;
+        }
+
+        .age
+        {
+            background-color:rgb(255, 255, 255);
+            outline-color: rgba(0, 0, 0, 0);
+            color: rgb(117, 117, 117);
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 42px;
+            font-weight: 500;
+            text-align: center;
+            position: absolute;
+            width: 180px;
+            height: 70px;
+            top: 790px;
+            left: 1080px;
+            border: 1px;
+        }
+
+        .male
+        {
+            opacity: 0;
+            position: absolute;
+            top: 288px;
+            left: 988px;
+            border: 1px;
+        }
+
+        .female
+        {
+            opacity: 0;
+            position: absolute;
+            top: 288px;
+            left: 638px;
+            border: 1px;
+        }
+        
+        p
+        {   
+            color: rgb(117, 117, 117);
+            font-family: 'Nanum Gothic', sans-serif;
+            font-size: 42px;
+            font-weight: 500;
+            text-align: center;
+            position: absolute;
+            top: 760px;
+            left: 1220px;
+        }
+    </style>
+
+    <script>
+        for(var i = 0; i < 12; i++)
+        {
+            
+            localStorage.setItem('guard'+i,false);
+            console.log(localStorage.getItem('guard'+i));
+        }
+        for(var i = 0; i < 13; i++)
+        {
+            localStorage.setItem('edu'+i,false);
+            console.log(localStorage.getItem('edu'+i));
+        }
+        for(var i = 0; i < 24; i++)
+        {
+            localStorage.setItem('hobby'+i,false);
+            console.log(localStorage.getItem('hobby'+i));
+        }
+        for(var i = 0; i < 19; i++)
+        {
+            localStorage.setItem('living'+i,false);
+            console.log(localStorage.getItem('living'+i));
+        }
+
+        for(var i = 0; i < 12; i++)
+        {
+            localStorage.setItem('job'+i,false);
+            console.log(localStorage.getItem('job'+i));
+        }
+        for(var i = 0; i < 21; i++)
+        {
+            localStorage.setItem('money'+i,false);
+            console.log(localStorage.getItem('money'+i));
+        }
+        for(var i = 0; i < 24; i++)
+        {
+            localStorage.setItem('med'+i,false);
+            console.log(localStorage.getItem('med'+i));
+        }
+        for(var i = 0; i < 13; i++)
+        {
+            localStorage.setItem('marry'+i,false);
+            console.log(localStorage.getItem('marry'+i));
+        }
+    </script>
+
+</head>
+<body>
+
+    <img src="../Image/03_gender.jpg">
+
+    <input type='text' class='name' placeholder="이 름">
+    <input type='text' class='age' placeholder="">
+    <p> 세 </p>
+    <img class="male" src="../Image/male.jpg">
+
+    <script>
+        document.querySelector('.male').onclick = function()
+        {
+            document.querySelector(".male").style.opacity = 1;
+            document.querySelector(".female").style.opacity = 0;
+            localStorage.setItem('gender',"남자");
+        }
+    </script>
+
+    <img class="female" src="../Image/female.jpg">
+    <script>
+        document.querySelector('.female').onclick = function()
+        {
+            document.querySelector(".male").style.opacity = 0;
+            document.querySelector(".female").style.opacity = 1;
+            localStorage.setItem('gender',"여자");
+        }
+    </script>
+
+    <button class="btn1"></button>
+    <script> //JS
+        document.querySelector('.btn1').onclick = function() 
+        {
+            localStorage.setItem('name',document.querySelector('.name').value);
+            localStorage.setItem('age',document.querySelector('.age').value);
+
+            if(!document.querySelector('.name').value)
+            {
+                alert("이 름을 입력해주세요.");
+            }
+            else if(!document.querySelector('.age').value)
+            {
+                alert("나 이를 입력해주세요.");
+            }
+            else if(localStorage.getItem("gender") == "없음")
+            {
+                alert("성별을 선택해주세요.");
+            }
+            else
+            {
+                location.href="04_home.html";
+            }
+            
+        }
+    </script>
+    <script src="object.js"></script>
+</body>
+</html>

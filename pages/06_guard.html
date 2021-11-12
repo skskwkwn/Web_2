@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+
+    <style>
+         .etc
+         {
+             letter-spacing: 20px;
+             font-size: 15px;
+             top: 179px;
+             left: 188px;
+         }
+         .name    
+         {
+             width: 72px;
+         }
+ 
+         .age        
+         {
+             width: 22px;
+             left: 201px;
+         }
+ 
+         .gender
+         {
+             position: absolute;
+             top: 95px;
+             left: 130px;
+         }
+ 
+         .blind
+         {
+             position:absolute;
+             top: 355px;
+             left: 370px;
+             width: 600px;
+             height: 50px;
+         }  
+ 
+         .blind1
+         {
+             position: absolute;
+             top: 94px;
+             left: 135px;
+             width: 106px;
+             height: 124px;
+             border-radius: 10%;
+         }
+ 
+         .btn
+         {
+             background: url('../image/cardPick/06_guard_35.jpg');
+             position: absolute;
+             top: 478px;
+             left: 48px;
+             width: 460px;
+             height: 450px;
+             border: 1px;
+             opacity: 0;
+         }
+         
+         .btn1
+         {
+             background: url('../image/cardPick/06_guard_36.jpg');
+             position: absolute;
+             top: 478px;
+             left: 508px;
+             width: 460px;
+             height: 450px;
+             border: 1px;
+             opacity: 0;
+ 
+         }
+         
+         .btn2
+         {
+             background: url('../image/cardPick/06_guard_37.jpg');
+             position: absolute;
+             top: 478px;
+             left: 968px;
+             width: 460px;
+             height: 450px;
+             border: 1px;
+             opacity: 0;
+ 
+         }
+         
+         .btn3
+         {
+             background: url('../image/cardPick/06_guard_38.jpg');
+             position: absolute;
+             top: 478px;
+             left: 1428px;
+             width: 460px;
+             height: 450px;
+             border: 1px;
+             opacity: 0;
+ 
+         }
+ 
+         .prev
+         {
+             background-color: rgba(255, 255, 255, 0);
+             position: absolute;
+             top: 976px;
+             left: 75px;
+             width: 680px;
+             height: 100px;
+             border: 1px;
+         }
+         
+         .next
+         {
+             background-color: rgba(255, 255, 255, 0);
+             position: absolute;
+             top: 976px;
+             left: 1175px;
+             width: 680px;
+             height: 100px;
+             border: 1px;
+         }
+
+         .text
+        {
+            position:relative;
+            top: -719px;;
+            left: 375px;
+        }
+         
+        .home
+        {
+            position: absolute;
+            top: 110px;
+            left: 1735px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            opacity: 0;
+        }
+     </style>
+   
+ </head>
+ <body>
+ 
+     <img src="../Image/06_guard.jpg">
+     <img class="blind1" src="../Image/Blind_white.jpg" alt="">
+ 
+     <div>
+         <p class="name">나성민</p>
+         <p class="age">20</p>
+         <p class="etc">님세</p>
+     </div>
+     
+     <img class="blind" src="../Image/Blind_white.jpg" alt="">
+     <img class="gender" src="../Image/profileFemale.jpg" alt="">
+
+     <img class="text" id="1" src="" alt="">
+     <img class="text" id="2" src="" alt="">
+     <img class="text" id="3" src="" alt="">
+     <img class="text" id="4" src="" alt="">
+ 
+ <button class="btn"></button>
+ <button class="btn1"></button>
+ <button class="btn2"></button>
+ <button class="btn3"></button>
+<button class="prev"></button>
+<button class="next"></button>
+<button class="home"></button>
+ 
+ <script>
+     document.querySelector('.btn').onclick = function() 
+     {
+         if(document.querySelector(".btn").style.opacity < 1)
+         {
+             document.querySelector(".btn").style.opacity = 1;
+             localStorage.setItem('guard4',true);
+             document.getElementById("1").src = "../Image/Texts/guard/06_guard_27.jpg";
+         }
+         else
+         {            
+             document.querySelector(".btn").style.opacity = 0;
+             localStorage.setItem('guard4',false);
+             document.getElementById("1").src = "";
+         }
+     }
+     document.querySelector('.btn1').onclick = function() 
+     {
+         if(document.querySelector(".btn1").style.opacity < 1)
+         {
+             document.querySelector(".btn1").style.opacity = 1;
+             localStorage.setItem('guard5',true);
+             document.getElementById("2").src = "../Image/Texts/guard/06_guard_28.jpg";
+         }
+         else
+         {            
+             document.querySelector(".btn1").style.opacity = 0;
+             localStorage.setItem('guard5',false);
+             document.getElementById("2").src = "";
+         }
+     }
+     document.querySelector('.btn2').onclick = function() 
+     {
+         if(document.querySelector(".btn2").style.opacity < 1)
+         {
+             document.querySelector(".btn2").style.opacity = 1;
+             localStorage.setItem('guard6',true);
+             document.getElementById("3").src = "../Image/Texts/guard/06_guard_29.jpg";
+ 
+         }
+         else
+         {            
+             document.querySelector(".btn2").style.opacity = 0;
+             localStorage.setItem('guard6',false);
+             document.getElementById("3").src = "";
+         }
+     }
+     document.querySelector('.btn3').onclick = function() 
+     {
+         if(document.querySelector(".btn3").style.opacity < 1)
+         {
+             document.querySelector(".btn3").style.opacity = 1;
+             localStorage.setItem('guard7',true);
+             document.getElementById("4").src = "../Image/Texts/guard/06_guard_30.jpg";
+         }
+         else
+         {            
+             document.querySelector(".btn3").style.opacity = 0;
+             localStorage.setItem('guard7',false);
+             document.getElementById("4").src = "";
+         }
+     }
+
+     document.querySelector('.prev').onclick = function()
+    {
+        location.href = "05_guard.html";
+    }
+
+    document.querySelector('.next').onclick = function()
+    {
+        location.href="07_guard.html";
+    }
+
+    document.querySelector('.home').onclick = function()
+    {
+        location.href="04_home.html";
+    }
+ </script>
+ 
+
+<script src="object.js"></script>
+</body>
+</html>

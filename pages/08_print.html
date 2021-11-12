@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
+    <title>Document</title>
+
+    <style>
+        
+        /*left 25 395 765 1163 +370*/
+        /*top 253 615 +362 */
+        .img_0
+        {
+            position: absolute;
+            top: 253px;
+            left: 25px;
+            opacity: 1;
+        }
+
+        .img_1
+        {
+            position: absolute;
+            top: 253px;
+            left: 395px;
+            opacity: 1;
+        }
+
+        .img_2
+        {
+            position: absolute;
+            top: 253px;
+            left: 765px;
+            opacity: 1;
+        }
+
+        .img_3
+        {
+            position: absolute;
+            top: 253px;
+            left: 1135px;
+            opacity: 1;
+        }
+
+        .img_4
+        {
+            position: absolute;
+            top: 615px;
+            left: 25px;
+            opacity: 1;
+        }
+
+        .img_5
+        {
+            position: absolute;
+            top: 615px;
+            left: 395px;
+            opacity: 1;
+        }
+
+        .img_6
+        {
+            position: absolute;
+            top: 615px;
+            left: 765px;
+            opacity: 1;
+        }
+
+        .img_7
+        {
+            position: absolute;
+            top: 615px;
+            left: 1135px;
+            opacity: 1;
+        }
+
+        .prev
+        {
+            background-color: rgba(255, 255, 255,0);
+            position: absolute;
+            top: 976px;
+            left: 50px;
+            width: 500px;
+            height: 100px;
+            border: 1px;
+        }
+        
+        .next
+        {
+            background-color: rgba(255, 255, 255,0);
+            position: absolute;
+            top: 976px;
+            left: 990px;
+            width: 500px;
+            height: 100px;
+            border: 1px;
+        }
+
+        p
+         {
+             font-size: 18px;
+             font-weight: bold;
+             text-align: right;
+             float: left;
+             position: absolute;
+             top: 143px;
+             left: 146px;
+             border-radius: 13%;
+         }
+         /* 172 117*/
+         .etc
+         {
+             letter-spacing: 20px;
+             font-size: 15px;
+             top: 150px;
+             left: 217px;
+         }
+         .name    
+         {
+             width: 72px;
+         }
+ 
+         .age        
+         {
+             width: 22px;
+             left: 230px;
+         }
+ 
+         .gender
+         {
+             position: absolute;
+             top: 65px;
+             left: 160px;
+         }
+ 
+         .blind1
+         {
+            position: absolute;
+             top: 60px;
+             left: 162px;
+             width: 107px;
+             height: 126px;
+             border-radius: 10%;
+         }  
+ 
+
+    </style>
+
+</head>
+<body>
+
+    <img src="../Image/08_print.jpg">
+    <img class="blind1" src="../Image/Blind_white.jpg" >
+
+
+    <div>
+        <p class="name">나성민</p>
+        <p class="age">20</p>
+        <p class="etc">님세</p>
+    </div>
+
+    <img class="blind" src="../image/Blind_guard.jpg">
+    <img class="img_0" src="../image/cardResult/05_guard_35.jpg">
+    <img class="img_1" src="../image/cardResult/05_guard_36.jpg">
+    <img class="img_2" src="../image/cardResult/05_guard_37.jpg">
+    <img class="img_3" src="../image/cardResult/05_guard_38.jpg">
+    <img class="img_4" src="../image/cardResult/06_guard_35.jpg">
+    <img class="img_5" src="../image/cardResult/06_guard_36.jpg">
+    <img class="img_6" src="../image/cardResult/06_guard_37.jpg">
+    <img class="img_7" src="../image/cardResult/06_guard_38.jpg">
+    <img class="gender" src="../Image/profileMale.jpg">
+
+
+    <button class="prev"></button>
+    <script>
+        document.querySelector('.prev').onclick = function()
+        {
+            location.href = '07_guard.html';
+        }
+    </script>
+
+    <button class="next"></button>
+    <script>
+        document.querySelector('.next').onclick = function()
+        {
+            location.href = '09_print.html';
+        }
+    </script>
+
+<script>
+    var num = 0;
+ for(var i = 0; i < 8; i++)
+        {
+            /*left 25 395 765 1135 +370*/
+            /*top 253 615 +362 */
+            if(localStorage.getItem("guard"+i) == "true")
+            {
+                switch(num)
+                {
+                        case 0:
+                        document.querySelector(".img_"+i).style.left = "25px";
+                        document.querySelector(".img_"+i).style.top = "253px";
+
+                        break;
+
+                        case 1:
+                        document.querySelector(".img_"+i).style.left = "395px";
+                        document.querySelector(".img_"+i).style.top = "253px";
+
+                        break;
+
+                        case 2:
+                        document.querySelector(".img_"+i).style.left = "765px";
+                        document.querySelector(".img_"+i).style.top = "253px";
+
+                        break;
+
+                        case 3:
+                        document.querySelector(".img_"+i).style.left = "1135px";
+                        document.querySelector(".img_"+i).style.top = "253px";
+
+                        break;
+
+                        case 4:
+                        document.querySelector(".img_"+i).style.left = "25px";
+                        document.querySelector(".img_"+i).style.top = "615px";
+
+                        break;
+
+                        case 5:
+                        document.querySelector(".img_"+i).style.left = "395px";
+                        document.querySelector(".img_"+i).style.top = "615px";
+
+                        break;
+
+                        case 6:
+                        document.querySelector(".img_"+i).style.left = "765px";
+                        document.querySelector(".img_"+i).style.top = "615px";
+
+                        break;
+
+                        case 7:
+                        document.querySelector(".img_"+i).style.left = "1135px";
+                        document.querySelector(".img_"+i).style.top = "615px";
+
+                        break;
+                }
+                num++;
+            }
+            else
+            {
+                document.querySelector(".img_"+i).style.opacity = 0;
+
+            }
+        }
+</script>
+
+<script src="object.js"></script>
+</body>
+</html>
